@@ -88,7 +88,6 @@ angular.module('slick', [])
                 sl.slideHandler(currentIndex)
             onReInit: scope.onReInit or null
             onSetPosition: scope.onSetPosition or null
-            pauseOnHover: scope.pauseOnHover isnt "false"
             pauseOnHover: scope.pauseOnHover isnt "true"
             responsive: scope.responsive() or null
             rtl: scope.rtl is "true"
@@ -105,7 +104,7 @@ angular.module('slick', [])
             vertical: scope.vertical is "true"
             prevArrow: if scope.prevArrow then $(scope.prevArrow) else undefined
             nextArrow: if scope.nextArrow then $(scope.nextArrow) else undefined
-            
+
 
           scope.$watch("currentIndex", (newVal, oldVal) ->
             if currentIndex? and newVal? and newVal != currentIndex
